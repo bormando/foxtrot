@@ -1,0 +1,12 @@
+version: '3'
+services:
+  selenium:
+    image: selenium/standalone-chrome-debug:3.141.59-vanadium
+    volumes:
+      - /dev/shm:/dev/shm
+    environment:
+      - SCREEN_WIDTH=1280
+      - SCREEN_HEIGHT=720
+    ports:
+      - "4444:4444"
+      - "5900:5900"  # VNC password is "secret"
